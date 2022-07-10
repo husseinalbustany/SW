@@ -1,0 +1,22 @@
+<h1 id="tableLabel">SW starships</h1>
+
+<p>{{ LoadingData }}</p>
+<p>{{ ValidNumber }}</p>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="starships">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of Stop</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sw of starships">
+      <td>{{ sw.name }}</td>
+      <td>{{ sw.numberofstops }}</td>
+
+    </tr>
+  </tbody>
+</table>
